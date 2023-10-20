@@ -1,0 +1,25 @@
+# do {tb_ip_2port_ram_compile.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:59:55 on Oct 20,2023
+# vlog -incr -work xil_defaultlib ../../../../ip_1port_ram.gen/sources_1/ip/blk_mem_gen_0_1/sim/blk_mem_gen_0.v ../../../../../rtl/ip_1port_ram.v ../../../../../rtl/ram_rw.v ../../../../../sim/tb/tb_ip_1port_ram.v 
+# -- Compiling module blk_mem_gen_0
+# -- Compiling module ip_2port_ram
+# -- Compiling module ram_rw
+# -- Compiling module tb_ip_2port_ram
+# 
+# Top level modules:
+# 	tb_ip_2port_ram
+# End time: 16:59:55 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:59:55 on Oct 20,2023
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 16:59:55 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
