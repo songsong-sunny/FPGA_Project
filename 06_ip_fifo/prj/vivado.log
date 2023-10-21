@@ -1,0 +1,281 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 21 20:29:56 2023
+# Process ID: 4632
+# Current directory: F:/FPGA_Project/06_ip_fifo/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6936 F:\FPGA_Project\06_ip_fifo\prj\ip_fifo.xpr
+# Log file: F:/FPGA_Project/06_ip_fifo/prj/vivado.log
+# Journal file: F:/FPGA_Project/06_ip_fifo/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+add_files -norecurse {F:/FPGA_Project/06_ip_fifo/rtl/ip_fifo.v F:/FPGA_Project/06_ip_fifo/rtl/fifo_wr.v F:/FPGA_Project/06_ip_fifo/rtl/fifo_rd.v}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse F:/FPGA_Project/06_ip_fifo/sim/tb/tb_ip_fifo.v
+update_compile_order -fileset sim_1
+set_property target_simulator ModelSim [current_project]
+update_compile_order -fileset sim_1
+set_property compxlib.modelsim_compiled_library_dir D:/modeltech64_2020.4/win64 [current_project]
+launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+Command: launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'ModelSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-ModelSim-47] Finding simulator installation...
+INFO: [USF-ModelSim-50] Using simulator executables from 'D:/modeltech64_2020.4/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-modelsim-7] Finding pre-compiled libraries...
+CRITICAL WARNING: [USF-modelsim-8] Failed to find the pre-compiled simulation library!
+INFO: [USF-modelsim-9]  Recommendation:- Please follow these instructions to resolve this issue:-
+ - set the 'COMPXLIB.MODELSIM_COMPILED_LIBRARY_DIR' project property to the directory where Xilinx simulation libraries are compiled for ModelSim/QuestaSim, or
+ - set the 'MODELSIM' environment variable to point to the modelsim.ini file, or
+ - set the 'WD_MGC' environment variable to point to the directory containing the modelsim.ini file
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ip_fifo' in fileset 'sim_1'...
+INFO: [USF-ModelSim-107] Finding global include files...
+INFO: [USF-ModelSim-108] Finding include directories and verilog header directory paths...
+INFO: [USF-ModelSim-109] Fetching design files from 'sim_1'...
+INFO: [USF-ModelSim-2] ModelSim::Compile design
+INFO: [USF-ModelSim-15] Creating automatic 'do' files...
+INFO: [USF-ModelSim-69] Executing 'COMPILE and ANALYZE' step in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+Reading pref.tcl
+
+# 2020.4
+
+# do {tb_ip_fifo_compile.do}
+# ** Error: Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xpm modelsim_lib/msim/xpm 
+# Copying D:/modeltech64_2020.4/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:/modeltech64_2020.4/win64/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+#          MODELSIM set to D:/modeltech64_2020.4/win64/../modelsim.ini.
+#          The MODELSIM environment variable is used to find the modelsim.ini
+#          file, so this local copy will not be used.
+# Error in macro ./tb_ip_fifo_compile.do line 16
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xpm modelsim_lib/msim/xpm 
+# Copying D:/modeltech64_2020.4/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:/modeltech64_2020.4/win64/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+#          MODELSIM set to D:/modeltech64_2020.4/win64/../modelsim.ini.
+#          The MODELSIM environment variable is used to find the modelsim.ini
+#          file, so this local copy will not be used.
+#     while executing
+# "exec <nul: {D:\modeltech64_2020.4\win64\vmap.EXE} xpm modelsim_lib/msim/xpm"
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 47)
+#     invoked from within
+# "D:\\modeltech64_2020.4\\win64\\vmap xpm modelsim_lib/msim/xpm"
+ModelSim> INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:01:40 . Memory (MB): peak = 1139.395 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:01:40 . Memory (MB): peak = 1139.395 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property compxlib.modelsim_compiled_library_dir D:/modeltech64_2020.4/vivado2020_2_lib [current_project]
+launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+Command: launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'ModelSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-ModelSim-47] Finding simulator installation...
+INFO: [USF-ModelSim-50] Using simulator executables from 'D:/modeltech64_2020.4/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-modelsim-7] Finding pre-compiled libraries...
+INFO: [USF-modelsim-11] File 'D:/modeltech64_2020.4/vivado2020_2_lib/modelsim.ini' copied to run dir:'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ip_fifo' in fileset 'sim_1'...
+INFO: [USF-ModelSim-107] Finding global include files...
+INFO: [USF-ModelSim-108] Finding include directories and verilog header directory paths...
+INFO: [USF-ModelSim-109] Fetching design files from 'sim_1'...
+INFO: [USF-ModelSim-2] ModelSim::Compile design
+INFO: [USF-ModelSim-15] Creating automatic 'do' files...
+INFO: [USF-ModelSim-69] Executing 'COMPILE and ANALYZE' step in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+Reading pref.tcl
+
+# 2020.4
+
+# do {tb_ip_fifo_compile.do}
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/work".
+# Errors: 0, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim".
+# Errors: 0, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xil_defaultlib".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:53:23 on Oct 21,2023
+# vlog -incr -work xil_defaultlib ../../../../ip_fifo.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v ../../../../../rtl/fifo_rd.v ../../../../../rtl/fifo_wr.v ../../../../../rtl/ip_fifo.v ../../../../../sim/tb/tb_ip_fifo.v 
+# -- Compiling module fifo_generator_0
+# -- Compiling module fifo_rd
+# -- Compiling module fifo_wr
+# -- Compiling module ip_fifo
+# -- Compiling module tb_ip_fifo
+# 
+# Top level modules:
+# 	tb_ip_fifo
+# End time: 20:53:23 on Oct 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:53:23 on Oct 21,2023
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 20:53:23 on Oct 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+INFO: [USF-ModelSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-ModelSim-4] ModelSim::Simulate design
+INFO: [USF-ModelSim-69] Executing 'SIMULATE' step in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+Program launched (PID=7036)
+launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+Command: launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'ModelSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-ModelSim-47] Finding simulator installation...
+INFO: [USF-ModelSim-50] Using simulator executables from 'D:/modeltech64_2020.4/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-modelsim-7] Finding pre-compiled libraries...
+INFO: [USF-modelsim-11] File 'D:/modeltech64_2020.4/vivado2020_2_lib/modelsim.ini' copied to run dir:'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ip_fifo' in fileset 'sim_1'...
+INFO: [USF-ModelSim-107] Finding global include files...
+INFO: [USF-ModelSim-108] Finding include directories and verilog header directory paths...
+INFO: [USF-ModelSim-109] Fetching design files from 'sim_1'...
+INFO: [USF-ModelSim-2] ModelSim::Compile design
+INFO: [USF-ModelSim-15] Creating automatic 'do' files...
+INFO: [USF-ModelSim-69] Executing 'COMPILE and ANALYZE' step in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+Reading pref.tcl
+
+# 2020.4
+
+# do {tb_ip_fifo_compile.do}
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/work".
+# Errors: 0, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim".
+# Errors: 0, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xil_defaultlib".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:55:15 on Oct 21,2023
+# vlog -incr -work xil_defaultlib ../../../../ip_fifo.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v ../../../../../rtl/fifo_rd.v ../../../../../rtl/fifo_wr.v ../../../../../rtl/ip_fifo.v ../../../../../sim/tb/tb_ip_fifo.v 
+# -- Skipping module fifo_generator_0
+# -- Skipping module fifo_rd
+# -- Skipping module fifo_wr
+# -- Compiling module ip_fifo
+# -- Skipping module tb_ip_fifo
+# 
+# Top level modules:
+# 	tb_ip_fifo
+# End time: 20:55:15 on Oct 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 20:55:15 on Oct 21,2023
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 20:55:15 on Oct 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+INFO: [USF-ModelSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-ModelSim-4] ModelSim::Simulate design
+INFO: [USF-ModelSim-69] Executing 'SIMULATE' step in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+Program launched (PID=25948)
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.USE_PHASE_ALIGNMENT {true} CONFIG.ENABLE_CLOCK_MONITOR {false} CONFIG.PRIM_IN_FREQ {50} CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {18} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {18} CONFIG.MMCM_CLKOUT1_DIVIDE {9} CONFIG.PLL_CLKIN_PERIOD {20.000} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT1_JITTER {210.144} CONFIG.CLKOUT1_PHASE_ERROR {161.614} CONFIG.CLKOUT2_JITTER {175.200} CONFIG.CLKOUT2_PHASE_ERROR {161.614}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files f:/FPGA_Project/06_ip_fifo/prj/ip_fifo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+generate_target all [get_files  f:/FPGA_Project/06_ip_fifo/prj/ip_fifo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files f:/FPGA_Project/06_ip_fifo/prj/ip_fifo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] f:/FPGA_Project/06_ip_fifo/prj/ip_fifo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 16
+[Sat Oct 21 21:01:10 2023] Launched clk_wiz_0_synth_1...
+Run output will be captured here: F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files f:/FPGA_Project/06_ip_fifo/prj/ip_fifo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.ip_user_files/sim_scripts -ip_user_files_dir F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.ip_user_files -ipstatic_source_dir F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/modeltech64_2020.4/vivado2020_2_lib} {questa=F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.cache/compile_simlib/questa} {riviera=F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.cache/compile_simlib/riviera} {activehdl=F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+Command: launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim/simulate.log"
+launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+Command: launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'ModelSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-ModelSim-47] Finding simulator installation...
+INFO: [USF-ModelSim-50] Using simulator executables from 'D:/modeltech64_2020.4/win64/vsim.exe'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-modelsim-7] Finding pre-compiled libraries...
+INFO: [USF-modelsim-11] File 'D:/modeltech64_2020.4/vivado2020_2_lib/modelsim.ini' copied to run dir:'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ip_fifo' in fileset 'sim_1'...
+INFO: [USF-ModelSim-107] Finding global include files...
+INFO: [USF-ModelSim-108] Finding include directories and verilog header directory paths...
+INFO: [USF-ModelSim-109] Fetching design files from 'sim_1'...
+INFO: [USF-ModelSim-2] ModelSim::Compile design
+INFO: [USF-ModelSim-15] Creating automatic 'do' files...
+INFO: [USF-ModelSim-69] Executing 'COMPILE and ANALYZE' step in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+Reading pref.tcl
+
+# 2020.4
+
+# do {tb_ip_fifo_compile.do}
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/work".
+# Errors: 0, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim".
+# Errors: 0, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xil_defaultlib".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 21:01:35 on Oct 21,2023
+# vlog -incr -work xil_defaultlib "+incdir+../../../../ip_fifo.gen/sources_1/ip/clk_wiz_0" ../../../../ip_fifo.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v ../../../../ip_fifo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v ../../../../ip_fifo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v ../../../../../rtl/fifo_rd.v ../../../../../rtl/fifo_wr.v ../../../../../rtl/ip_fifo.v ../../../../../sim/tb/tb_ip_fifo.v 
+# -- Compiling module fifo_generator_0
+# -- Compiling module clk_wiz_0_clk_wiz
+# -- Compiling module clk_wiz_0
+# -- Compiling module fifo_rd
+# -- Compiling module fifo_wr
+# -- Compiling module ip_fifo
+# -- Compiling module tb_ip_fifo
+# 
+# Top level modules:
+# 	tb_ip_fifo
+# End time: 21:01:35 on Oct 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 21:01:35 on Oct 21,2023
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 21:01:35 on Oct 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+INFO: [USF-ModelSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-ModelSim-4] ModelSim::Simulate design
+INFO: [USF-ModelSim-69] Executing 'SIMULATE' step in 'F:/FPGA_Project/06_ip_fifo/prj/ip_fifo.sim/sim_1/behav/modelsim'
+Program launched (PID=27996)
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 21 21:12:24 2023...
