@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 22 22:21:59 2023
+# Process ID: 29576
+# Current directory: F:/FPGA_Project/07_uart_loopback/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8456 F:\FPGA_Project\07_uart_loopback\prj\uart_loopback.xpr
+# Log file: F:/FPGA_Project/07_uart_loopback/prj/vivado.log
+# Journal file: F:/FPGA_Project/07_uart_loopback/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/FPGA_Project/07_uart_loopback/prj/uart_loopback.xpr
+update_compile_order -fileset sources_1
+set_property target_simulator ModelSim [current_project]
+launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
+set_property compxlib.modelsim_compiled_library_dir D:/modeltech64_2020.4/vivado2020_2_lib [current_project]
+launch_simulation -install_path D:/modeltech64_2020.4/win64 -gcc_install_path D:/modeltech64_2020.4/vivado2020_2_lib
